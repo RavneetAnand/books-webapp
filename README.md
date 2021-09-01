@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Pre-requisite
+In order to run this application, please run the book-service(https://github.com/ravneet-anand/books-service) to serve as the API.
+
 ## Available Scripts
 
 In the project directory, you can run:
