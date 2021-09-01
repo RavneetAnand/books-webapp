@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+html { font-size: 22px; }
+body { padding: 1rem; }
+
+.App {
+    text-align: left;
+}
+
+.books {
+    max-width: 1800px;
+    margin: 0 auto;
+    display: grid;
+    grid-row-gap: 1rem;
+    grid-column-gap: 0rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.book {
+    height: 10rem;
+    width: 5.5rem;
+}
+
+.desc {
+    padding: 1px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+
+.author {
+    padding: 1px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

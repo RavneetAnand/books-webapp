@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import { connect } from 'react-redux';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import './App.css';
 
-function App() {
+import BookGrid from './components/book-grid';
+import Login from './components/login';
+
+const mapStateToProps = (state) => {
+  return {
+    currentUser: state.userReducer.user
+  }
+};
+
+export const App = ({currentUser}) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <div>
+          <div className="container mt-3">
+            <Switch>
+              <Route exact path={["/", "/login"]} component={Login} />
+              <Route path="/books" component={BookGrid} />
+            </Switch>
+          </div>
+        </div>
+      </Router>
   );
 }
 
-export default App;
+export default connect(mapStateToProps)(App);
