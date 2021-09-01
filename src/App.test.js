@@ -53,6 +53,7 @@ describe('Book', () => {
       uniqueUrl: 'https://www.perlego.com/book/3969/learning-beaglebone-python-programming'
     }
     render(<Book bookDetail={props} />)
-    screen.debug();
+    const linkElement = screen.getByText('Learning BeagleBone Python Programming');
+    expect(linkElement).toBeTruthy();
   });
 });
